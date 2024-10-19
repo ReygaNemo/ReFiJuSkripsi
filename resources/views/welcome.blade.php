@@ -37,5 +37,9 @@
             {{ Session::get('image_visible', true) ? 'Hide Image' : 'Show Image' }}
         </button>
     </form>
+    <form method="POST" action="/send-message-to-flask">
+        @csrf
+        <button type="submit">Send Hello World to Flask</button>
+    </form>
 </body>
 </html>
