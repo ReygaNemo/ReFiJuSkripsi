@@ -79,21 +79,22 @@
         <div class="row-auto">
             <div class="container" style="margin-top: 7rem;">
                 <div class="row">
-                    <div class="col-sm-2 mb-3">
+                <div class="col-sm-2">
                         <div class="card">
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">A</div>
-                                <div class="card-text">
-
+                                <div class="card-image">
+                                <img src="{{ asset('dictionary/a.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
-                        </div></div>
+                        </div>
+                    </div>
                     <div class="col-sm-2">
                         <div class="card">
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">B</div>
                                 <div class="card-image">
-
+                                <img src="{{ asset('dictionary/b.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
                         </div>
@@ -103,7 +104,7 @@
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">C</div>
                                 <div class="card-image">
-
+                                <img src="{{ asset('dictionary/c.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
                         </div>
@@ -113,7 +114,7 @@
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">D</div>
                                 <div class="card-image">
-
+                                <img src="{{ asset('dictionary/d.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
                         </div>
@@ -123,7 +124,7 @@
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">E</div>
                                 <div class="card-image">
-
+                                <img src="{{ asset('dictionary/e.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
                         </div>
@@ -133,7 +134,7 @@
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">F</div>
                                 <div class="card-image">
-
+                                <img src="{{ asset('dictionary/f.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
                         </div>
@@ -143,7 +144,7 @@
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">G</div>
                                 <div class="card-image">
-
+                                <img src="{{ asset('dictionary/g.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
                         </div>
@@ -153,7 +154,7 @@
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">H</div>
                                 <div class="card-image">
-
+                                <img src="{{ asset('dictionary/h.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
                         </div>
@@ -163,7 +164,7 @@
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">I</div>
                                 <div class="card-image">
-
+                                <img src="{{ asset('dictionary/i.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
                         </div>
@@ -173,7 +174,7 @@
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">J</div>
                                 <div class="card-image">
-
+                                <img src="{{ asset('dictionary/j.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
                         </div>
@@ -183,7 +184,7 @@
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">K</div>
                                 <div class="card-image">
-
+                                <img src="{{ asset('dictionary/k.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
                         </div>
@@ -193,7 +194,7 @@
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">L</div>
                                 <div class="card-image">
-
+                                <img src="{{ asset('dictionary/l.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
                         </div>
@@ -203,7 +204,7 @@
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">M</div>
                                 <div class="card-image">
-
+                                <img src="{{ asset('dictionary/m.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
                         </div>
@@ -213,7 +214,7 @@
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">N</div>
                                 <div class="card-image">
-
+                                <img src="{{ asset('dictionary/n.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
                         </div>
@@ -223,7 +224,7 @@
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">O</div>
                                 <div class="card-image">
-
+                                <img src="{{ asset('dictionary/o.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
                         </div>
@@ -233,7 +234,7 @@
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">P</div>
                                 <div class="card-image">
-
+                                <img src="{{ asset('dictionary/p.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
                         </div>
@@ -243,7 +244,7 @@
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">Q</div>
                                 <div class="card-image">
-
+                                <img src="{{ asset('dictionary/q.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
                         </div>
@@ -253,7 +254,7 @@
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">R</div>
                                 <div class="card-image">
-
+                                <img src="{{ asset('dictionary/r.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
                         </div>
@@ -263,7 +264,7 @@
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">S</div>
                                 <div class="card-image">
-
+                                <img src="{{ asset('dictionary/s.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
                         </div>
@@ -273,7 +274,7 @@
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">T</div>
                                 <div class="card-image">
-
+                                <img src="{{ asset('dictionary/t.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
                         </div>
@@ -283,7 +284,7 @@
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">U</div>
                                 <div class="card-image">
-
+                                <img src="{{ asset('dictionary/u.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
                         </div>
@@ -293,7 +294,7 @@
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">V</div>
                                 <div class="card-image">
-
+                                <img src="{{ asset('dictionary/v.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
                         </div>
@@ -303,7 +304,7 @@
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">W</div>
                                 <div class="card-image">
-
+                                <img src="{{ asset('dictionary/w.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
                         </div>
@@ -313,7 +314,7 @@
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">X</div>
                                 <div class="card-image">
-
+                                <img src="{{ asset('dictionary/x.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
                         </div>
@@ -323,7 +324,7 @@
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">Y</div>
                                 <div class="card-image">
-
+                                <img src="{{ asset('dictionary/y.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
                         </div>
@@ -333,7 +334,7 @@
                             <div class="card-body p-4 px-5" style="line-height: 2.7rem">
                                 <div class="h5 text-center mb-3">Z</div>
                                 <div class="card-image">
-
+                                <img src="{{ asset('dictionary/z.jpg') }}" alt="Description of image" style="width: 100%; max-width: 150px; height: auto;">
                                 </div>
                             </div>
                         </div>
