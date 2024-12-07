@@ -3,11 +3,19 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FlaskController;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Http\Request;
 Route::get('/call-flask', [FlaskController::class, 'callFlask']);
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 
+Route::post('/receive_sentence', function (Request $request) {
+    $sentence = $request->input('sentence');
+    
+    // You can process the sentence here, like storing it in the database or using it for further actions.
+    
+    return response()->json(['message' => 'Sentence received successfully']);
+});
 Route::get('/about-us', function () {
     return view('aboutus');
 });

@@ -94,19 +94,21 @@
     <div class="container">
         <h1>SIBI Translation Video Feed</h1>
 
-        @php
+        <?php
             $displayStyle = Session::get('image_visible', true) ? 'block' : 'none';
-        @endphp
+        ?>
 
-        <img id="videoFeed" src="http://localhost:5000/video_feed" alt="Video Feed" style="display: {{ $displayStyle }}; width: 640px; height: 480px;">
+        <img id="videoFeed" src="http://localhost:5000/video_feed" alt="Video Feed" style="display: <?php echo e($displayStyle); ?>; width: 640px; height: 480px;">
 
         <!-- Form to toggle image visibility -->
-        <form action="{{ route('toggle-image') }}" method="POST">
-            @csrf <!-- Include CSRF token for security -->
+        <form action="<?php echo e(route('toggle-image')); ?>" method="POST">
+            <?php echo csrf_field(); ?> <!-- Include CSRF token for security -->
             <button type="submit" class="hide-btn">
-                {{ Session::get('image_visible', true) ? 'Hide Image' : 'Show Image' }}
+                <?php echo e(Session::get('image_visible', true) ? 'Hide Image' : 'Show Image'); ?>
+
             </button>
         </form>
     </div>
 </body>
 </html>
+<?php /**PATH C:\ReFiJuSkripsi\resources\views/Translate.blade.php ENDPATH**/ ?>
