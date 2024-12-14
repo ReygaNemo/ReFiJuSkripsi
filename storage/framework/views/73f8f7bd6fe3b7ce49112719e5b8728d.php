@@ -37,7 +37,7 @@
         }
 
         /* Button styling */
-        .hide-btn {
+        .toggle-ajax-btn {
             padding: 10px 20px;
             background-color: #007bff;
             color: white;
@@ -50,7 +50,7 @@
             margin-top: 1rem;
         }
 
-        .hide-btn:hover {
+        .toggle-ajax-btn:hover {
             background-color: #0056b3;
         }
 
@@ -67,30 +67,70 @@
 </head>
 <body>
     <script>
-        // Use jQuery's AJAX to call the local Flask API every second
-        setInterval(function() {
-            // Create an empty FormData object
-            var formData = new FormData();
+        // Variable to control whether AJAX is running
+        let ajaxRunning = true;
+        let intervalId;
 
-            $.ajax({
-                url: 'http://127.0.0.1:5000/send_sentence',  // The Flask API route
-                method: 'POST', // POST request
-                data: formData, // Send the empty FormData object
-                processData: false, // Don't process the data (important for form-data)
-                contentType: false, // Don't set content type (important for form-data)
-                success: function(response) {
-                    // Update the content on the page with the new data
-                    $('#message').text(response.message);  // Adjust if your API returns a different structure
-                },
-                error: function() {
-                    $('#message').text('Failed to load data.');
+        // Function to start AJAX polling
+        function startAjax() {
+            intervalId = setInterval(function() {
+                if (ajaxRunning) {
+                    $.ajax({
+                        url: 'http://127.0.0.1:5000/send_sentence', // The Flask API route
+                        method: 'POST', // POST request
+                        data: new FormData(), // Send the empty FormData object
+                        processData: false, // Don't process the data (important for form-data)
+                        contentType: false, // Don't set content type (important for form-data)
+                        success: function(response) {
+                            $('#message').text(response.message); // Adjust if your API returns a different structure
+                        },
+                        error: function() {
+                            $('#message').text('Failed to load data.');
+                        }
+                    });
+                }
+            }, 1000); // 1000 ms = 1 second
+        }
+
+        // Function to stop AJAX polling
+        function stopAjax() {
+            clearInterval(intervalId);
+            $('#message').text(""); // Adjust if your API returns
+        }
+
+        $(document).ready(function() {
+            // Start the AJAX polling by default
+            startAjax();
+
+            // Toggle AJAX polling when the button is clicked
+            $('#toggle-ajax').click(function() {
+                ajaxRunning = !ajaxRunning;
+                if (ajaxRunning) {
+                    startAjax();
+                    $(this).text('Stop AJAX');
+                } else {
+                    stopAjax();
+                    $(this).text('Start AJAX');
                 }
             });
-        }, 1000); // 1000 ms = 1 second
+            $('#clear-sentence').click(function() {
+                $.ajax({
+                    url: 'http://127.0.0.1:5000/clear_sentence', // The Flask API route
+                    method: 'POST', // POST request
+                    data: new FormData(), // Send the empty FormData object
+                    processData: false, // Don't process the data (important for form-data)
+                    contentType: false, // Don't set content type (important for form-data)
+                    success: function(response) {
+
+                    },
+                    error: function() {
+                        
+                    }
+                });
+            });
+        });
+
     </script>
-    <div id="data-container">
-        <p id="message">Loading...</p>
-    </div>
     <div class="container">
         <h1>SIBI Translation Video Feed</h1>
 
@@ -100,14 +140,23 @@
 
         <img id="videoFeed" src="http://localhost:5000/video_feed" alt="Video Feed" style="display: <?php echo e($displayStyle); ?>; width: 640px; height: 480px;">
 
+        <div id="data-container">
+            <p>Translation: </p>
+            <p id="message">Loading...</p>
+        </div>
+
         <!-- Form to toggle image visibility -->
         <form action="<?php echo e(route('toggle-image')); ?>" method="POST">
             <?php echo csrf_field(); ?> <!-- Include CSRF token for security -->
-            <button type="submit" class="hide-btn">
+            <button type="submit" class="toggle-ajax-btn">
                 <?php echo e(Session::get('image_visible', true) ? 'Hide Image' : 'Show Image'); ?>
 
             </button>
         </form>
+
+        <!-- Button to toggle AJAX -->
+        <button id="toggle-ajax" class="toggle-ajax-btn">Stop AJAX</button>
+        <button id="clear-sentence" class="toggle-ajax-btn">Clear Sentence</button>
     </div>
 </body>
 </html>
